@@ -115,7 +115,7 @@ export default function HomePage() {
 
   const kurmaImages = ["kurma/kurma1.jpg", "kurma/2.jpg"]
 
-  const permenCoklatImages = ["permen-coklat/permen.jpg"]
+  const BestSellerImages = ["bestseller/1.jpg", "bestseller/2.jpg", "bestseller/3.jpg"]
 
   const basrengImages = ["basreng/ori.jpg", "basreng/pedas.jpg", "basreng/pack.jpg"]
 
@@ -453,6 +453,35 @@ export default function HomePage() {
             <div className="mb-16">
               <h4 className="text-2xl font-bold text-foreground mb-8 text-center">🥜 Kacang Bawang</h4>
               <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6">
+                
+                {/* Rasa Original */}
+                <Card className="bg-card border-border">
+                  <CardHeader className="pb-4">
+                    <ProductCarousel images={BestSellerImages} alt="Kacang Bawang Original" />
+                    <CardTitle className="text-lg text-card-foreground text-center">Bestseller</CardTitle>
+                    <CardDescription className="text-sm">Favorit semua orang! Renyah, gurih, dan bikin nagih. Cocok untuk teman santai maupun suguhan spesial keluarga.</CardDescription>
+                  </CardHeader>
+                  <CardContent className="pt-0">
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">Kemasan:</span>
+                        <span className="text-card-foreground">Toples Bulat</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">Harga:</span>
+                        <span className="text-card-foreground">Hubungi Kami</span>
+                      </div>
+ 
+                    </div>
+                    <Button
+                      className="w-full mt-4 bg-primary hover:bg-primary/90"
+                      onClick={() => openWhatsApp("Kacang Bawang Original")}
+                    >
+                      Pesan Sekarang
+                    </Button>
+                  </CardContent>
+                </Card>
+                
                 {/* Rasa Original */}
                 <Card className="bg-card border-border">
                   <CardHeader className="pb-4">
@@ -584,7 +613,62 @@ export default function HomePage() {
                       className="w-full mt-4 bg-primary hover:bg-primary/90"
                       onClick={() => openWhatsApp("Pack Ekonomis Kacang Bawang")}
                     >
-                      Tanya Harga
+                      Pesan Sekarang
+                    </Button>
+                  </CardContent>
+                </Card>
+
+                {/* Basreng */}
+                <Card className="bg-card border-border">
+                  <CardHeader>
+                    <ProductCarousel images={basrengImages} alt="Basreng" />
+                    <CardTitle className="text-xl text-card-foreground text-center">🔥 Basreng</CardTitle>
+                    <CardDescription>Bakso goreng renyah dan gurih</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-3 text-sm mb-4">
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">Rasa Original:</span>
+                        <span className="text-card-foreground">Tersedia</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">Rasa Pedas:</span>
+                        <span className="text-card-foreground">Tersedia</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">Harga:</span>
+                        <span className="text-card-foreground font-semibold">Hubungi kami</span>
+                      </div>
+                    </div>
+                    <Button className="w-full bg-primary hover:bg-primary/90" onClick={() => openWhatsApp("Basreng")}>
+                      Pesan Sekarang
+                    </Button>
+                  </CardContent>
+                </Card>
+
+                {/* Kurma */}
+                <Card className="bg-card border-border">
+                  <CardHeader>
+                    <ProductCarousel images={kurmaImages} alt="Kurma Premium" />
+                    <CardTitle className="text-xl text-card-foreground text-center">🌴 Kurma</CardTitle>
+                    <CardDescription>Kurma pilihan berkualitas tinggi</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-3 text-sm mb-4">
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">Toples 400g:</span>
+                        <span className="text-card-foreground font-semibold">Tersedia</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">Toples 650g:</span>
+                        <span className="text-card-foreground font-semibold">Tersedia</span>
+                      </div>
+                    </div>
+                    <Button
+                      className="w-full bg-primary hover:bg-primary/90"
+                      onClick={() => openWhatsApp("Kurma Premium")}
+                    >
+                      Pesan Sekarang
                     </Button>
                   </CardContent>
                 </Card>
@@ -593,87 +677,11 @@ export default function HomePage() {
 
             {/* Other Products Section */}
             <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
-              {/* Basreng */}
-              <Card className="bg-card border-border">
-                <CardHeader>
-                  <ProductCarousel images={basrengImages} alt="Basreng" />
-                  <CardTitle className="text-xl text-card-foreground text-center">🔥 Basreng</CardTitle>
-                  <CardDescription>Bakso goreng renyah dan gurih</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3 text-sm mb-4">
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Rasa Original:</span>
-                      <span className="text-card-foreground">Tersedia</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Rasa Pedas:</span>
-                      <span className="text-card-foreground">Tersedia</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Harga:</span>
-                      <span className="text-card-foreground font-semibold">Hubungi kami</span>
-                    </div>
-                  </div>
-                  <Button className="w-full bg-primary hover:bg-primary/90" onClick={() => openWhatsApp("Basreng")}>
-                    Pesan Sekarang
-                  </Button>
-                </CardContent>
-              </Card>
+              
 
-              {/* Kurma */}
-              <Card className="bg-card border-border">
-                <CardHeader>
-                  <ProductCarousel images={kurmaImages} alt="Kurma Premium" />
-                  <CardTitle className="text-xl text-card-foreground text-center">🌴 Kurma</CardTitle>
-                  <CardDescription>Kurma pilihan berkualitas tinggi</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3 text-sm mb-4">
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Toples 400g:</span>
-                      <span className="text-card-foreground font-semibold">Tersedia</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Toples 650g:</span>
-                      <span className="text-card-foreground font-semibold">Tersedia</span>
-                    </div>
-                  </div>
-                  <Button
-                    className="w-full bg-primary hover:bg-primary/90"
-                    onClick={() => openWhatsApp("Kurma Premium")}
-                  >
-                    Pesan Sekarang
-                  </Button>
-                </CardContent>
-              </Card>
 
-              {/* Permen Coklat */}
-              <Card className="bg-card border-border">
-                <CardHeader>
-                  <ProductCarousel images={permenCoklatImages} alt="Permen Coklat" />
-                  <CardTitle className="text-xl text-card-foreground text-center">🍫 Permen Coklat</CardTitle>
-                  <CardDescription>Permen coklat lezat dalam toples bulat</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3 text-sm mb-4">
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Kemasan:</span>
-                      <span className="text-card-foreground">Toples Bulat</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Harga:</span>
-                      <span className="text-card-foreground font-semibold">Hubungi kami</span>
-                    </div>
-                  </div>
-                  <Button
-                    className="w-full bg-primary hover:bg-primary/90"
-                    onClick={() => openWhatsApp("Permen Coklat")}
-                  >
-                    Tanya Harga
-                  </Button>
-                </CardContent>
-              </Card>
+
+
             </div>
 
             {/* Hampers Section */}
@@ -981,7 +989,7 @@ export default function HomePage() {
                 </ul>
               </div>
 
-              <div>
+              {/*<div>
                 <h5 className="font-semibold mb-4">Perusahaan</h5>
                 <ul className="space-y-2 text-sm opacity-80">
                   <li>Tentang Kami</li>
@@ -991,7 +999,7 @@ export default function HomePage() {
                   <li>Galeri</li>
                   <li>Kontak</li>
                 </ul>
-              </div>
+              </div>*/}
 
               <div>
                 <h5 className="font-semibold mb-4">Legalitas & Sertifikasi</h5>
