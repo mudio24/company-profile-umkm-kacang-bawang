@@ -843,7 +843,8 @@ export default function HomePage() {
                     <MapPin className="h-8 w-8 text-primary" />
                   </div>
                   <h4 className="font-semibold text-foreground mb-2">Alamat</h4>
-                  <p className="text-muted-foreground">Jl. Raya Barat Gg. 8 Utara, Dukuhtengah</p>
+                  <p className="text-muted-foreground">Jl. Raya Barat Karangampel No.52</p>
+                  <p className="text-muted-foreground">Rt.05 Rw.01 Blok Desa, Ds. Dukuh tengah</p>
                   <p className="text-muted-foreground">Kec. Karangampel, Kabupaten Indramayu, Jawa Barat 45283</p>
                 </CardContent>
               </Card>
