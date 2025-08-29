@@ -454,7 +454,7 @@ export default function HomePage() {
               <h4 className="text-2xl font-bold text-foreground mb-8 text-center">🥜 Kacang Bawang</h4>
               <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6">
                 
-                {/* Rasa Original */}
+                {/* bestseller */}
                 <Card className="bg-card border-border">
                   <CardHeader className="pb-4">
                     <ProductCarousel images={BestSellerImages} alt="Kacang Bawang Original" />
